@@ -24,14 +24,10 @@ function monkey(){
 function stat(){
     let str = document.getElementById("str").value
     let obj = {}
-    for(var i=0;i<str.length;i++){
-        var key=str.charAt(i);
-        if(obj[key]){
-            ++obj[key];
-        }else{
-            obj[key]=0;
-            ++obj[key];
-        }
-    }
+    let array=str.split('').sort()//sort排序
+    obj=array.reduce((pre,fun) => {//reduce回调函数（以键 值的形式）
+        pre[fun]=pre[fun]? pre[fun]++:pre[fun]=1
+        return pre
+    },  {} )
     document.getElementById('result').innerText = JSON.stringify(obj)
 }
