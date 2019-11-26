@@ -25,9 +25,11 @@ function stat(){
     let str = document.getElementById("str").value
     let obj = {}
     let array=str.split('').sort()//sort排序
-    obj=array.reduce((pre,fun) => {//reduce回调函数（以键 值的形式）
-        pre[fun]=pre[fun]? pre[fun]++:pre[fun]=1
-        return pre
-    },  {} )
+    obj=array.reduce((shuzu,zimu) =>{ //reduce回调函数（以键 值的形式）
+    
+        shuzu[zimu]?shuzu[zimu] ++ : shuzu[zimu]=1
+        return shuzu},
+    
+      {} )
     document.getElementById('result').innerText = JSON.stringify(obj)
 }
