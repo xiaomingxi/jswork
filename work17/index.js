@@ -1,8 +1,8 @@
 //获取所有input框
 var input = document.getElementsByTagName('input');
 //为每个input框添加失去焦点事件
-for (var i = 0; i < input.length - 1; ++i) {
-    input[i].onblur = inputBlur;
+for (var i = 0; i < inputs.length - 1; ++i) {
+    inputs[i].onblur = inputBlur;
 }
 function inputBlur() {
     var name = this.name;
