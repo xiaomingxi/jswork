@@ -127,3 +127,4 @@
 })();
 //http://localhost:8080/ajax?page=
 //'http://localhost:8080/ajax'
+//xmlhttp.open('post', 'http://139.9.81.203:8090/ajax', true)老师的
